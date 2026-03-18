@@ -187,7 +187,7 @@ export default function Projects() {
 
         {/* GitHub CTA */}
         <div className="reveal mt-10 text-center">
-          <a href="#" className="inline-flex items-center gap-2 font-mono text-sm text-slate-400 border border-white/[0.07] px-6 py-3 rounded-sm
+          <a href="https://github.com/aenasheikh753" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-sm text-slate-400 border border-white/[0.07] px-6 py-3 rounded-sm
             hover:border-accent-blue/40 hover:text-accent-blue transition-all duration-300 hoverable">
             🐙 View all projects on GitHub →
           </a>

@@ -41,7 +41,7 @@ export default function Contact() {
         {/* Main CTA */}
         <div className="reveal mb-10">
           <a
-            href="mailto:amna@example.com"
+            href="mailto:amnaaena12@gmail.com"
             className="inline-block btn-shimmer px-10 py-4 text-white font-body font-medium text-lg rounded-sm
             shadow-[0_0_40px_rgba(56,189,248,0.2)] hover:shadow-[0_0_60px_rgba(167,139,250,0.3)]
             transition-shadow duration-300 hoverable"
@@ -53,14 +53,16 @@ export default function Contact() {
         {/* Social links grid */}
         <div className="reveal grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
-            { icon: "🐙", label: "GitHub", handle: "@amna-dev", href: "#" },
-            { icon: "💼", label: "LinkedIn", handle: "Amna Dev", href: "#" },
-            { icon: "🎨", label: "Figma", handle: "@amna.ui", href: "#" },
-            { icon: "🐦", label: "Twitter / X", handle: "@amna_codes", href: "#" },
+            { icon: "🐙", label: "GitHub", handle: "@aenasheikh753", href: "https://github.com/aenasheikh753" },
+            { icon: "💼", label: "LinkedIn", handle: "Amna Sheikh", href: "http://www.linkedin.com/in/amna-sheikhh12" },
+            { icon: "🌐", label: "Portfolio", handle: "amna-porttfolio", href: "https://amna-porttfolio.vercel.app/" },
+            { icon: "✉️", label: "Email", handle: "amnaaena12@gmail.com", href: "mailto:amnaaena12@gmail.com" },
           ].map(({ icon, label, handle, href }) => (
             <a
               key={label}
               href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="glow-card bg-[#080e1f] p-5 rounded-sm text-center group hoverable"
             >
               <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
@@ -79,10 +81,10 @@ export default function Contact() {
         {/* Email */}
         <div className="reveal mt-8">
           <a
-            href="mailto:amna@example.com"
+            href="mailto:amnaaena12@gmail.com"
             className="font-mono text-sm text-slate-400 hover:text-accent-blue transition-colors duration-300 tracking-wide hoverable"
           >
-            amna@example.com
+            amnaaena12@gmail.com
           </a>
         </div>
       </div>

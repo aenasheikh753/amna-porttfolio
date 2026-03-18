@@ -145,11 +145,13 @@ export default function Hero() {
               Let&apos;s Talk
             </a>
             <a
-              href="#"
+              href="https://amna-porttfolio.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-7 py-3.5 rounded-sm border border-white/10 text-slate-400 font-body font-medium tracking-wide hoverable
               hover:border-accent-violet/50 hover:text-accent-violet transition-all duration-300 text-sm backdrop-blur-sm"
             >
-              ↓ Resume
+              ↗ Portfolio
             </a>
           </div>
 

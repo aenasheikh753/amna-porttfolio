@@ -111,10 +111,17 @@ export default function About() {
 
           {/* Social links */}
           <div className="flex flex-wrap gap-3 mt-8">
-            {["GitHub", "LinkedIn", "Figma", "Twitter"].map((name) => (
+            {[
+              { name: "GitHub", href: "https://github.com/aenasheikh753" },
+              { name: "LinkedIn", href: "http://www.linkedin.com/in/amna-sheikhh12" },
+              { name: "Portfolio", href: "https://amna-porttfolio.vercel.app/" },
+              { name: "Email", href: "mailto:amnaaena12@gmail.com" },
+            ].map(({ name, href }) => (
               <a
                 key={name}
-                href="#"
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="hoverable px-3 py-2 font-mono text-[0.65rem] tracking-[0.1em] uppercase text-slate-500
                 border border-white/[0.07] rounded-sm hover:border-accent-blue/40 hover:text-accent-blue transition-all duration-300"
               >
