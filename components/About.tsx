@@ -110,7 +110,7 @@ export default function About() {
           </div>
 
           {/* Social links */}
-          <div className="flex gap-3 mt-8">
+          <div className="flex flex-wrap gap-3 mt-8">
             {["GitHub", "LinkedIn", "Figma", "Twitter"].map((name) => (
               <a
                 key={name}

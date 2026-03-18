@@ -154,7 +154,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex gap-12 mt-16 opacity-0 animate-[fadeUp_0.8s_1.1s_ease_forwards]">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-12 opacity-0 animate-[fadeUp_0.8s_1.1s_ease_forwards]">
             {[
               { num: "2+", label: "Years Experience" },
               { num: "15+", label: "Projects Shipped" },

@@ -141,7 +141,7 @@ export default function Projects() {
                 <h3 className="font-display text-3xl md:text-4xl font-semibold mb-1">{featured.title}</h3>
                 <div className="font-mono text-xs text-slate-500 tracking-widest uppercase mb-4">{featured.subtitle}</div>
                 <p className="font-body text-sm text-slate-400 leading-relaxed mb-6">{featured.desc}</p>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-x-4 gap-y-2">
                   <a href={featured.live} className="font-mono text-xs text-accent-blue tracking-[0.1em] hover:opacity-70 transition-opacity hoverable">↗ Live Demo</a>
                   <a href={featured.github} className="font-mono text-xs text-slate-400 tracking-[0.1em] hover:text-white transition-colors hoverable">⌥ GitHub</a>
                 </div>
@@ -175,7 +175,7 @@ export default function Projects() {
                 <h3 className="font-display text-2xl font-semibold mb-0.5">{p.title}</h3>
                 <div className="font-mono text-[0.65rem] text-slate-600 tracking-widest uppercase mb-3">{p.subtitle}</div>
                 <p className="font-body text-[0.85rem] text-slate-400 leading-relaxed mb-4">{p.desc}</p>
-                <div className="flex gap-4 pt-3 border-t border-white/[0.04]">
+                <div className="flex flex-wrap gap-x-4 gap-y-2 pt-3 border-t border-white/[0.04]">
                   <a href={p.live} className="font-mono text-[0.72rem] text-accent-blue tracking-[0.1em] hover:opacity-70 transition-opacity hoverable">↗ Live</a>
                   <a href={p.github} className="font-mono text-[0.72rem] text-slate-400 tracking-[0.1em] hover:text-white transition-colors hoverable">⌥ GitHub</a>
                   {p.figma && <a href={p.figma} className="font-mono text-[0.72rem] text-accent-rose tracking-[0.1em] hover:opacity-70 transition-opacity hoverable">🎨 Figma</a>}
