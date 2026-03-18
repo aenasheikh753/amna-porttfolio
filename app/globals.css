@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #04070f;
+  color: #e2e8f0;
+  font-family: var(--font-dm-sans), sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ─── CUSTOM CURSOR ─────────────────────── */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 14px #38bdf8;
+  transition: transform 0.1s;
+}
+
+.cursor-ring {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid rgba(56, 189, 248, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, border-color 0.3s, border-radius 0.3s;
+}
+
+.cursor-ring.hovering {
+  width: 56px;
+  height: 56px;
+  border-color: #f472b6;
+}
+
+/* ─── SCROLLBAR ─────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #04070f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #38bdf8, #a78bfa);
+  border-radius: 4px;
+}
+
+/* ─── NOISE OVERLAY ─────────────────────── */
+.noise::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+  z-index: 998;
+}
+
+/* ─── SECTION REVEAL ────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ─── GRADIENT TEXT ─────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-rose {
+  background: linear-gradient(135deg, #f472b6, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-emerald {
+  background: linear-gradient(135deg, #34d399, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── SHIMMER BUTTON ────────────────────── */
+.btn-shimmer {
+  background: linear-gradient(
+    90deg,
+    #38bdf8 0%,
+    #a78bfa 25%,
+    #f472b6 50%,
+    #a78bfa 75%,
+    #38bdf8 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ─── SKILL BAR ─────────────────────────── */
+.skill-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.skill-card.animated .skill-fill {
+  transform: scaleX(1);
+}
+
+/* ─── GLOWING BORDER CARD ───────────────── */
+.glow-card {
+  position: relative;
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.glow-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.08), 0 20px 60px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+}
+
+/* ─── TYPING CURSOR ─────────────────────── */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: #38bdf8;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+/* ─── FLOATING ORBS ─────────────────────── */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+  animation: pulse2 8s ease-in-out infinite;
+}
+
+/* ─── NAV BLUR ──────────────────────────── */
+.nav-blur {
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@keyframes pulse2 {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.08); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
