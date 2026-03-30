@@ -3,38 +3,38 @@ import { useEffect, useRef } from "react";
 
 const experiences = [
   {
-    date: "2023 — Present",
-    role: "Junior Frontend Developer",
-    company: "TechNova Solutions",
+    date: "2024 — Present",
+    role: "Frontend Developer Employee",
+    company: "Alright Tech",
     type: "Full-time",
     color: "accent-blue",
     borderColor: "border-sky-500/30",
     dotColor: "bg-accent-blue",
     desc: "Building responsive web apps with Next.js and Tailwind CSS. Collaborating with designers via Figma and managing code with GitHub. Reduced page load time by 40% via code-splitting and lazy loading. Contributing to a design system used across 3 products.",
-    skills: ["Next.js", "Tailwind CSS", "React", "TypeScript", "Figma"],
+    skills: ["Next.js", "Tailwind CSS", "React.js", "TypeScript", "Deployment"],
   },
   {
-    date: "2022 — 2023",
+    date: "2024 — 2024",
     role: "Frontend Developer Intern",
-    company: "PixelCraft Agency",
+    company: "Alright Tech",
     type: "Internship",
     color: "accent-violet",
     borderColor: "border-violet-500/30",
     dotColor: "bg-accent-violet",
-    desc: "Translated Figma mockups into pixel-perfect React + Bootstrap interfaces. Contributed to 8+ client websites, introduced reusable component library that cut dev time by 30%. Managed version control via GitHub throughout.",
-    skills: ["React", "Bootstrap", "Figma", "GitHub", "JavaScript"],
+    desc: "Translated Figma mockups into pixel-perfect React + Bootstrap interfaces. Contributed to 4+ client websites, introduced reusable component library that cut dev time by 30%. Managed version control via GitHub throughout.",
+    skills: ["Bootstrap", "Figma", "GitHub", "JavaScript" , "React"],
   },
-  {
-    date: "2022",
-    role: "UI/UX Design Freelancer",
-    company: "Self-employed",
-    type: "Freelance",
-    color: "accent-rose",
-    borderColor: "border-rose-500/30",
-    dotColor: "bg-accent-rose",
-    desc: "Designed user interfaces for 5+ startups using Figma. Delivered complete design systems, wireframes, and interactive prototypes. Built foundational understanding of user-centered design and responsive layouts.",
-    skills: ["Figma", "UI Design", "Prototyping", "Design Systems"],
-  },
+  // {
+  //   date: "2022",
+  //   role: "UI/UX Design Freelancer",
+  //   company: "Self-employed",
+  //   type: "Freelance",
+  //   color: "accent-rose",
+  //   borderColor: "border-rose-500/30",
+  //   dotColor: "bg-accent-rose",
+  //   desc: "Designed user interfaces for 5+ startups using Figma. Delivered complete design systems, wireframes, and interactive prototypes. Built foundational understanding of user-centered design and responsive layouts.",
+  //   skills: ["Figma", "UI Design", "Prototyping", "Design Systems"],
+  // },
 ];
 
 export default function Experience() {
@@ -134,8 +134,8 @@ export default function Experience() {
           <div className="flex items-center gap-3">
             <span className="text-2xl">🎓</span>
             <div>
-              <div className="font-body text-sm text-white font-medium">Bachelor's in Computer Science</div>
-              <div className="font-mono text-[0.68rem] text-slate-500 tracking-widest mt-0.5">COMSATS University Islamabad • 2020 – 2024</div>
+              <div className="font-body text-sm text-white font-medium">Bachelor's in Software Engineering</div>
+              <div className="font-mono text-[0.68rem] text-slate-500 tracking-widest mt-0.5">PMAS Arid Agriculture University Rawalpindi • 2020 – 2024</div>
             </div>
           </div>
         </div>

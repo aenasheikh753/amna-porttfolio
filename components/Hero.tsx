@@ -4,9 +4,10 @@ import { useEffect, useRef, useState } from "react";
 const roles = [
   "Next.js Developer",
   "React Engineer",
-  "UI/UX Designer",
   "Tailwind Expert",
-  "Figma Craftsperson",
+  "Deployment Specialist",
+  "Version Control Expert",
+  "Frontend Engineer",
 ];
 
 export default function Hero() {
