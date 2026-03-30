@@ -1,7 +1,23 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-const projects = [
+interface Project {
+  id: number;
+  title: string;
+  subtitle: string;
+  desc: string;
+  emoji: string;
+  tags: string[];
+  tagColors: string[];
+  gradient: string;
+  glow: string;
+  featured: boolean;
+  github: string;
+  live: string;
+  figma?: string;
+}
+
+const projects: Project[] = [
   {
     id: 1,
     title: "Scoova",
